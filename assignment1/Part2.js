@@ -4,14 +4,15 @@ var j;
 var prime;
 var fs = require('fs');
 var outfile = "primes.txt";
+var num=2;
 
-for (var i=2;i<=100;i++)
+while (primes.length <= 100)
 { 
     j=0;
     prime=true;
     while (j < primes.length)
     {
-        if (i%primes[j]===0)
+        if (num%primes[j]===0)
         {
             prime=false;
             break;
@@ -20,9 +21,9 @@ for (var i=2;i<=100;i++)
     }
     if (prime)
     {
-        primes.push(i.toString());
+        primes.push(num.toString());
     }
-
+num++;
 }
 
 var out = primes.toString();
